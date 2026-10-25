@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="THIENTRAN Bypass - Tự động vượt link4m, link4sub, layma, ontop" />
+  <meta name="theme-color" content="#07070f" />
+  <title>THIENTRAN Bypass</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg-glow"></div>
+  <div class="bg-grid"></div>
+
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon">⚡</span>
+        <h1>THIENTRAN</h1>
+      </div>
+      <p class="tagline">Auto Bypass · link4m · link4sub · layma · ontop</p>
+    </header>
+
+    <!-- Live Ticker -->
+    <div class="ticker-wrap">
+      <div class="ticker" id="ticker">
+        <span>✦ <b>THIENTRAN</b> đã vượt thành công</span>
+        <span>✦ <b>THIENTRAN</b> đã vượt thành công</span>
+        <span>✦ <b>THIENTRAN</b> đã vượt thành công</span>
+        <span>✦ <b>THIENTRAN</b> đã vượt thành công</span>
+        <span>✦ <b>THIENTRAN</b> đã vượt thành công</span>
+        <span>✦ <b>THIENTRAN</b> đã vượt thành công</span>
+      </div>
+    </div>
+
+    <!-- Main Card -->
+    <section class="card main-card">
+      <div class="card-title">
+        <span class="pulse-dot"></span>
+        <h2>Dán link cần vượt</h2>
+      </div>
+
+      <div class="services" id="svcList">
+        <button class="svc active" data-svc="auto">Tự nhận diện</button>
+        <button class="svc" data-svc="link4m">Link4M</button>
+        <button class="svc" data-svc="link4sub">Link4Sub</button>
+        <button class="svc" data-svc="layma">Layma</button>
+        <button class="svc" data-svc="ontop">Ontop</button>
+      </div>
+
+      <div class="input-group">
+        <input type="url" id="linkInput" placeholder="https://link4m.com/..." autocomplete="off" spellcheck="false" />
+        <button class="btn btn-primary" id="btnBypass">
+          <span class="btn-text">Vượt ngay</span>
+          <span class="btn-loader" hidden></span>
+        </button>
+      </div>
+
+      <!-- Progress -->
+      <div class="progress-panel" id="progressPanel" hidden>
+        <div class="progress-track">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <p class="progress-status" id="progressStatus">Đang khởi tạo...</p>
+      </div>
+
+      <!-- Result -->
+      <div class="result-panel" id="resultPanel" hidden>
+        <div class="result-badge">✓ ĐÃ VƯỢT XONG</div>
+        <p class="result-link" id="resultLink"></p>
+        <div class="result-actions">
+          <button class="btn btn-ghost" id="btnCopy">Copy</button>
+          <button class="btn btn-primary" id="btnOpen">Mở link</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+      <div class="stat">
+        <span class="stat-num" id="statTotal">0</span>
+        <span class="stat-label">Đã vượt</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" id="statToday">0</span>
+        <span class="stat-label">Hôm nay</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" id="statSuccess">100%</span>
+        <span class="stat-label">Thành công</span>
+      </div>
+    </section>
+
+    <!-- History -->
+    <section class="card">
+      <div class="card-title">
+        <span class="pulse-dot cyan"></span>
+        <h2>Lịch sử gần đây</h2>
+      </div>
+      <div class="history" id="historyList">
+        <p class="empty">Chưa có lịch sử</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>by <strong>Trần phi thiên</strong></p>
+      <p class="footer-note">Chỉ trả link đã vượt xong · Không đưa link gốc</p>
+    </footer>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <span class="toast-icon">✓</span>
+    <span class="toast-text">THIENTRAN đã vượt thành công</span>
+  </div>
+
+  <script src="js/ticker.js"></script>
+  <script src="js/bypass.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
